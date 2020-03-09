@@ -1,146 +1,169 @@
-        #all{
-			height: 1665px;
-			width: 940px;
-			border-radius: 10px;
-			margin: 0 auto;/*all 居中 */
-			background: #FAEBD7;
-			text-align: center;
-        }/*全部内容 */
-		
-		img{
-			width: 100px;
-			border-width: 15px;
-			border-style: solid;
-			border-color: #000000;
-			border-radius: 100% 100% 50% 50%;
-		}/*头（图片属性） */
-		
-		
-		#head{
-			padding-top: 10px;
-		}
-		/*头（上边框留白）*/
-		
-		#hat{
-			width: 700px;
-			border-width: 15px 15px 0 15px;
-			border-style: solid;
-			border-color: #000000;
-			border-radius: 100%;
-			padding: 15px 0 ;
-			margin: -15px auto 15px;
-			font-size: 30px;
-		}
-		/*帽（属性） */
-		
-		a{
-			text-decoration: none;
-			color: blue;	
-		}/*链接（样式） */
-		
-		.hat_t{
-			display: inline-block;
-		}
-		
-		.hat_t:hover{
-			transform: rotate(30deg);
-		}
-		
-		.eye{
-			display: inline-block;
-			width: 200px;
-			height: 100px;
-			margin: 50px 10px;
-			border-width: 10px;
-			border-style: solid;
-			border-color: black;
-			border-radius: 50% 40% 50% 40%;
-			font-size: 100px;
-		}
-		
-		#nose{
-			width: 20px;
-			height: 50px;
-			margin: 10px auto;
-			border: solid 5px black;
-			/* border-radius: 100%; */
-		}
-		
-		#mouse{
-			width: 40px;
-			height: 50px;
-			margin: 40px auto;
-			border: solid 10px black;
-			border-radius: 100%;
-		}
-		
-		
-/* 		#animation1{
-			float: left;
-			clear: left;
-			width: 10px;
-			height: 30px;
-			background: green;
-			border-radius: 100%;
-			position: relative;
-			animation: theanimation1 5s alternate infinite ease-in;
-		} */
-		/*定位，不加无法移动 */
-		/*动画1：动画名，动画持续时间，（单数正向，双数反向），无限循环，速度不变linear/ease-in-out低速开始结束 */
-		
-		/* #animation2{
-			float: left;
-			width: 10px;
-			height: 30px;
-			background: skyblue;
-			border-radius: 100%;
-			position: relative;
-			animation: theanimation2 5s alternate infinite ease-in;
-		} */
-		/*定位，不加无法移动 */
-		/*动画2：动画名，动画持续时间，（单数正向，双数反向），无限循环，速度不变linear/ease低速开始结束 */
-		
-/* 		@keyframes theanimation1{
-			from{left: 0px;}
-			to{left: 930px;}
-			0%{background: red;}
-			14%{background: orange;}
-			28%{background: yellow;}
-			42%{background: green;}
-			56%{background: blue;}
-			70%{background: indigo;}
-			84%{background: purple;}
-		}
-		
-		@keyframes theanimation2{
-			from{left: 930px;}
-			to{left: 0px;}
-			0%{background: red;}
-			14%{background: orange;}
-			28%{background: yellow;}
-			42%{background: green;}
-			56%{background: blue;}
-			70%{background: indigo;}
-			84%{background: purple;}
-		} */
-		
-		.first{
-			width: 70%;
-			margin: 0 auto;
-		}
-		
-		.second{
-			display: inline-block;
-			width: 49%;
-		}
+#all{
+	position: relative;
+	height: 1665px;
+	width: 940px;
+	border-radius: 10px;
+	margin: 0 auto;/*all 居中 */
+	background: #FAEBD7;
+	text-align: center;
+/* 	min-height:100%;
+	height: auto !important;
+	height: 100%; */
+}/*全部内容*/
+.page-header{
+	border: none;
+}
+/* #container{
+	min-height:100%;
+	height: auto !important;
+	height: 100%;
+	position: relative;
+	
+} */
 
-		.video_txt{
-			font-size: large;
-			margin: 10px;
-			padding: 10px;
-			border: goldenrod solid 5px;
-		}
-		
-		video{
-			width: 100%;
-		}
+/* img{
+	width: 100px;
+	border-width: 15px;
+	border-style: solid;
+	border-color: #000000;
+	border-radius: 100% 100% 50% 50%;
+} */
+/*头（图片属性） */
+
+
+#head{
+	padding-top: 10px;
+}
+/*头（上边框留白）*/
+
+#hat{
+	width: 700px;
+	border-width: 15px 15px 0 15px;
+	border-style: solid;
+	border-color: #000000;
+	border-radius: 100%;
+	padding: 15px 0 ;
+	margin: -15px auto 15px;
+	font-size: 30px;
+}
+/*帽（属性） */
+
+a{
+	text-decoration: none;
+	color: gray;	
+}/*链接（样式） */
+
+.hat_t{
+	display: inline-block;
+}
+
+.hat_t:hover{
+	transform: rotate(30deg);
+}
+
+.eye{
+	display: inline-block;
+	width: 200px;
+	height: 100px;
+	margin: 50px 10px;
+	border-width: 10px;
+	border-style: solid;
+	border-color: black;
+	border-radius: 50% 40% 50% 40%;
+	font-size: 100px;
+}
+
+#nose{
+	width: 20px;
+	height: 50px;
+	margin: 10px auto;
+	border: solid 5px black;
+	/* border-radius: 100%; */
+}
+
+#mouse{
+	width: 40px;
+	height: 50px;
+	margin: 40px auto;
+	border: solid 10px black;
+	border-radius: 100%;
+}
+
+#foot{
+		position: absolute;
+		display: block;
+		bottom: 0;
+		height: 30px;
+		width: 100%;
+		text-align: center;
+	}
+
+/* 		#animation1{
+	float: left;
+	clear: left;
+	width: 10px;
+	height: 30px;
+	background: green;
+	border-radius: 100%;
+	position: relative;
+	animation: theanimation1 5s alternate infinite ease-in;
+} */
+/*定位，不加无法移动 */
+/*动画1：动画名，动画持续时间，（单数正向，双数反向），无限循环，速度不变linear/ease-in-out低速开始结束 */
+
+/* #animation2{
+	float: left;
+	width: 10px;
+	height: 30px;
+	background: skyblue;
+	border-radius: 100%;
+	position: relative;
+	animation: theanimation2 5s alternate infinite ease-in;
+} */
+/*定位，不加无法移动 */
+/*动画2：动画名，动画持续时间，（单数正向，双数反向），无限循环，速度不变linear/ease低速开始结束 */
+
+/* 		@keyframes theanimation1{
+	from{left: 0px;}
+	to{left: 930px;}
+	0%{background: red;}
+	14%{background: orange;}
+	28%{background: yellow;}
+	42%{background: green;}
+	56%{background: blue;}
+	70%{background: indigo;}
+	84%{background: purple;}
+}
+
+@keyframes theanimation2{
+	from{left: 930px;}
+	to{left: 0px;}
+	0%{background: red;}
+	14%{background: orange;}
+	28%{background: yellow;}
+	42%{background: green;}
+	56%{background: blue;}
+	70%{background: indigo;}
+	84%{background: purple;}
+} */
+
+.first{
+	width: 70%;
+	margin: 0 auto;
+}
+
+.second{
+	display: inline-block;
+	width: 49%;
+}
+
+.video_txt{
+	font-size: large;
+	margin: 10px;
+	padding: 10px;
+	border: goldenrod solid 5px;
+}
+
+video{
+	width: 100%;
+}
