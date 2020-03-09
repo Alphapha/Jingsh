@@ -1,0 +1,55 @@
+        #all{
+			/* height: 1665px; */
+			width: 940px;
+			border-radius: 10px;
+			margin: 0 auto;
+			background: #FAEBD7;
+			text-align: center;
+			padding: 0 0 1px 0;
+        }/*全部内容 */
+		
+		.title{
+			font-size: 100px;
+			color: #0000FF;
+			background: #DAA520;
+			padding: 0 0 10px 0;
+			margin: 0 0 -10px 0;
+			border-radius: 10px 10px 0 0;
+		}
+		
+		a{
+			text-decoration: none;
+			color: skyblue;
+		}
+		
+		.sub{
+			width: 940px;
+			height: 100px;
+			font-size: 70px;
+			color: aliceblue;
+			background: gray;
+			display: block;
+			transition: all 0.1s;
+			}
+			
+		.sub:hover{
+			transform: scale(1.1);
+		}
+		
+		.content{
+			width: 920px;
+			border: solid 1px gray;
+			margin: 10px 10px;
+		}
+		
+		#wx{
+			width: 300px;
+		}
+		
+		.wx{
+			display: inline-block;
+			width: 400px;
+			height: 400px;
+			margin: 50px 10px;
+			border: solid 1px gray;
+		}
