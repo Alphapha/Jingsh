@@ -1,0 +1,48 @@
+<meta charset="utf-8" />
+<%@language="vbscript" codepage="65001"%>
+<!--#include file="conn.asp"-->
+<!--#include file="md5.asp"-->
+<%
+	Userid = trim(request.Form("Userid"))
+	Password = trim(request.Form("Password"))
+	login=request.Form("login")
+	cook=request.Form("cook")
+	if request.Form("login")<>"ok" then response.redirect "index.html"
+	sql = "select * from member where Phone ='"&Userid&"'"
+	rs.open sql,conn,1,3
+	
+	' response.write "'"&Userid&"'"
+	' response.write "'"&login&"'"
+	' response.write "'"&cook&"'"
+	' response.write (rs("Status"))
+	
+	if (rs.bof and rs.eof) then
+		response.write "<script>alert('查无此人,请先注册!');location.href='sign_in.asp'</script>"
+		response.end
+	end if
+	if rs("Status") <> "1" then 
+		response.write "<script language='javascript'>"
+		response.write "alert('对不起,你的账号不可用,请联系管理员');"
+		response.write "location.href='javascript:history.go(-1)';"
+		response.write "</script>"
+		response.end
+	end if
+	if rs("Password")<>Password then
+		session("login_error")=session("login_error")+1
+		response.write "<script language='javascript'>"
+		response.write "alert('您输入的密码不正确,请检查后重新输入.\n\n出错"&session("login_error")&"次');"
+		response.write "location.href='javascript:history.go(-1)';"
+			response.write "</script>"
+			response.end
+	else 
+		rs("Lasttime")=now()
+		rs("IP")=Request.serverVariables("REMOTE_ADDR")
+		rs("Totallogin")=rs("Totallogin")+1
+		rs.update
+		response.cookies("huancun")("Phone")=Userid
+		if request.form("cook")<>"0" then response.cookies("huancun").expires=now+cook
+		response.write "<meta http-equiv='refresh' content='0;URL=user_center.asp'>"
+	end if
+	rs.close
+	set rs=nothing
+%>
