@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>京师一体化办公</title>
+	</head>
+	<body>
+		<form method="post" action="" onsubmit="return Check()" name="order">
+			<h1>京师一体化办公</h1><br><br>
+			目的地：<select>
+				<option value ="北京">北京</option>
+				<option value ="上海">上海</option>
+			</select><br><br>
+			姓名：<input type="text" name="kkr" placeholder="出行人"  ><br><br>
+			
+			性别：<select>
+				<option value ="男">男</option>
+				<option value ="女">女</option>
+			</select><br><br>
+			
+			手机：<input type="text" name="bz" placeholder="尽量填下微信手机号" ><br /><br />
+			来沪时间：<input type="date" name="rq1" class="rowrow"/><br><br>
+			
+			离沪时间：<input type="date" name="rq2" class="rowrow"/><br><br>
+			
+			是否住宿：<input type="text" name="bz1" placeholder="123" ><br /><br />
+			
+			是否就餐：<input type="text" name="bz2" placeholder="456" ><br /><br />
+			
+			工位号：<input type="text" name="bz3" placeholder="789" ><br /><br />
+			
+			门禁卡+宿舍卡押金200元，领卡时缴纳押金，退卡时退还押金。<br><br>
+			
+			<input type="hidden" name="cook" value="0">
+			
+			<input type="submit" value="预定" style="width: 50px;height: 50px;background-color: whitesmoke;border-radius: 100%;"/>
+		</form>
+	</body>
+</html>
