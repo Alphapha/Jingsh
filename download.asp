@@ -35,7 +35,7 @@
 			</thead>
 			<tbody>
 				<%
-					sql= "select * from download"
+					sql= "select * from download where ls in (0,1)"
 					rs.CursorLocation = 3
 					rs.open sql,conn,1,3
 					for i=1 to rs.recordcount
@@ -50,7 +50,7 @@
 					rs.close
 				%>
 			</tbody>
-			<button onclick="jump()">管理</button><br /><br /><br />
+			
 		</table>
 			<script language="JavaScript">
 				function jump(){

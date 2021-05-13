@@ -1,0 +1,13 @@
+.floor3{border: 10px solid darkred;border-radius: 10px;width: 4800px;text-align: center;}
+.little{float: left;width: 120px;height: 45px;border: white solid 1px;text-align: center;}/* 小模块-用于道路 */
+.littles{float: left;width: 120px;height: 45px;border: white solid 1px;text-align: center;background-color: royalblue;}/* 房间模块 */
+.littlel{float: left;width: 120px;height: 45px;border: white solid 1px;background-color: darkgreen;text-align: center;}/* 无用建筑 */
+.littled{float: left;width: 120px;height: 45px;border: white solid 1px;background-color: black;text-align: center;}/* 多余模块 */
+.little-seat{float: left;width: 52px;height: 182px;border: white solid 1px;margin: 0px 2px;text-align: center;}
+.little-seatl{float: left;width: 52px;height: 182px;border: white solid 1px;margin: 0px 2px;background-color: darkgreen;text-align: center;}
+.little-seat-a{float: left;width: 120px;height: 183px;border: white solid 1px;text-align: center;}
+.little-seat-ad{float: left;width: 120px;height: 183px;border: white solid 1px;text-align: center;background-color: black;}
+.little-seat-al{float: left;width: 120px;height: 183px;border: white solid 1px;background-color: darkgreen;text-align: center;}
+.little-seat-atom{height: 42px;border: #0000FF solid 1px;text-align: center;border-radius: 10px;background-color: mistyrose;}
+.middle{height: 50px;border: white solid 1px;text-align: center;}
+.middle-seat{height: 180px;border: white solid 1px;text-align: center;}

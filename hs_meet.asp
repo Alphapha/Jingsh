@@ -123,7 +123,6 @@
 			<option value="洽谈室(7)">洽谈室(7)</option>
 			<option value="洽谈室(8)">洽谈室(8)</option>
 			<option value="洽谈室(8)">洽谈室(9)</option>
-			<option value="党建室">党建室</option>
 		</select>
 		
 		
@@ -197,7 +196,7 @@
 	</form>
 	
 	
-	注意：大会议室预定需审核通过才可使用，具体联系会议负责人。
+	注意：党建室、大会议室预定需审核通过才可使用，具体联系行政办公室前台021-62637999。
 	<br /><br />
 	<table border="1" class="meet">
 		<thead>
@@ -338,25 +337,51 @@
 				<td><%=att(3,88)%><br><%=att(4,88)%><br><%=att(5,88)%></td>
 				<td><%=att(3,89)%><br><%=att(4,89)%><br><%=att(5,89)%></td>
 			</tr>	
-			<tr>
-				<td height="50px">党建室</td>
-				<td><%=att(3,90)%><br><%=att(4,90)%><br><%=att(5,90)%></td>
-				<td><%=att(3,91)%><br><%=att(4,91)%><br><%=att(5,91)%></td>
-				<td><%=att(3,92)%><br><%=att(4,92)%><br><%=att(5,92)%></td>
-				<td><%=att(3,93)%><br><%=att(4,93)%><br><%=att(5,93)%></td>
-				<td><%=att(3,94)%><br><%=att(4,94)%><br><%=att(5,94)%></td>
-				<td><%=att(3,95)%><br><%=att(4,95)%><br><%=att(5,95)%></td>
-				<td><%=att(3,96)%><br><%=att(4,96)%><br><%=att(5,96)%></td>
-				<td><%=att(3,97)%><br><%=att(4,97)%><br><%=att(5,97)%></td>
-				<td><%=att(3,98)%><br><%=att(4,98)%><br><%=att(5,98)%></td>
-				<td><%=att(3,99)%><br><%=att(4,99)%><br><%=att(5,99)%></td>
-			</tr>
 		</tfoot>	
 	</table>
+	
+	<table border="2" class="meet">
+		<thead>
+			
+			<tr> 
+				<td colspan="9" height="60px">非当日会议室预定情况</td>
+			</tr>
+			<tr>
+				<th>日期</th>
+				<th>时间</th>
+				<th>会议室</th>
+				<th>扣费律师</th>
+				<th>预定人</th>
+				<th>备注</th>
+			</tr>
+		</thead>
+		<tbody>
+			<%
+				set rs3=server.createObject("adodb.recordset")
+				sql3= "SELECT * from meetorder_hs WHERE DATE > CURDATE()  and USER IS NOT NULL"
+				rs3.CursorLocation = 3
+				rs3.open sql3,conn,1,3
+				for i=1 to rs3.recordcount
+					Response.write "<tr>"
+					Response.write "<td>" &rs3.Fields.Item("DATE")&  "</td>"
+					Response.write "<td>" &rs3.Fields.Item("ROOM")& "</td>"
+					Response.write "<td>" &rs3.Fields.Item("TIME")&  "</td>"
+					
+					Response.write "<td>" &rs3.Fields.Item("USER")& "</td>"
+					Response.write "<td>" &rs3.Fields.Item("SJH")& "</td>"
+					Response.write "<td>" &rs3.Fields.Item("BZ")& "</td>"
+					Response.write "</tr>"
+					rs3.movenext
+				next
+				rs3.close
+			%>
+		</tbody>
+	</table>
+	
 	<table border="2" class="meet">
 		<thead>
 			<tr>
-				<td colspan="12" height="60px">五楼大会议室</td>
+				<td colspan="12" height="60px">京师沪师活动安排表</td>
 			</tr>
 			<tr>
 				<th>时间</th>
@@ -392,42 +417,6 @@
 		</tbody>
 	</table>
 	
-	<table border="2" class="meet">
-		<thead>
-			
-			<tr> 
-				<td colspan="9" height="60px">非当日会议室预定情况</td>
-			</tr>
-			<tr>
-				<th>日期</th>
-				<th>时间</th>
-				<th>会议室</th>
-				<th>扣款律师</th>
-				<th>预定人</th>
-				<th>备注</th>
-			</tr>
-		</thead>
-		<tbody>
-			<%
-				set rs3=server.createObject("adodb.recordset")
-				sql3= "SELECT * from meetorder_hs WHERE DATE > CURDATE()  and USER IS NOT NULL"
-				rs3.CursorLocation = 3
-				rs3.open sql3,conn,1,3
-				for i=1 to rs3.recordcount
-					Response.write "<tr>"
-					Response.write "<td>" &rs3.Fields.Item("DATE")&  "</td>"
-					Response.write "<td>" &rs3.Fields.Item("ROOM")& "</td>"
-					Response.write "<td>" &rs3.Fields.Item("TIME")&  "</td>"
-					
-					Response.write "<td>" &rs3.Fields.Item("USER")& "</td>"
-					Response.write "<td>" &rs3.Fields.Item("SJH")& "</td>"
-					Response.write "<td>" &rs3.Fields.Item("BZ")& "</td>"
-					Response.write "</tr>"
-					rs3.movenext
-				next
-				rs3.close
-			%>
-		</tbody>
-	</table>
+	
 </body>
 </html>

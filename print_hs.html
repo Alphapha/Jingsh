@@ -1,0 +1,642 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+	<title>打印机 | Printer</title>
+	<link rel="shortcut icon" href="img/hs/logo_hs.png" />
+	<!-- Bootstrap -->
+	<!-- jQuery (Bootstrap 的所有 JavaScript 插件都依赖 jQuery，所以必须放在前边) -->
+	<script src="/css/bootstrap/js/jquery.min.js"></script>
+	<!-- 加载 Bootstrap 的所有 JavaScript 插件。你也可以根据需要只加载单个插件。 -->
+	<script src="/css/bootstrap/js/bootstrap.min.js"></script>
+	<link href="/css/bootstrap/css/bootstrap.css" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="/css/index.css" />
+	<script src="js/click.js" defer="defer"></script>
+	<style type="text/css">
+		*{
+			cursor: url('./img/play/kn5.cur'),default;
+			
+		}
+	</style>
+</head>
+<body onselectstart="return false" oncontextmenu="return false">
+<div class="container">
+	<div class="row clearfix">
+		<div class="col-md-12 column">
+			<div class="page-header">
+				<h1 class="print_h3">
+					打印机指南 <br><small>Printer Manual</small>
+				</h1>
+			</div>
+			<!--打印机声明&导航-->
+			<div class="row clearfix">
+				<div class="col-md-12 column">
+					<h3 class="print_h3">
+						导航 <small>Navigator</small>
+					</h3>
+					<div class="row clearfix">
+						<div class="col-md-6 column">
+							<div class="row clearfix">
+								<div class="col-md-6 column">
+									<button onclick="location.href='print.html#Installing'" class="btn btn-block active btn-lg btn-success" type="button">安装设置<br><small>Install & set</small> </button>
+								</div>
+								<div class="col-md-6 column">
+									<button onclick="location.href='print.html#Handbook'" class="btn active btn-block btn-lg btn-danger" type="button">使用指南<br><small>Handbook</small></button>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-6 column">
+							<div class="row clearfix">
+								<div class="col-md-6 column">
+									<button onclick="location.href='http://192.168.4.222:8080/'" class="btn active btn-block btn-lg btn-info" type="button">密码修改<br><small>Update Password</small></button>
+								</div>
+								<div class="col-md-6 column">
+									<button onclick="location.href=location.href='print.html#Administrator'" class="btn active btn-warning btn-block btn-lg" type="button" >管理员<br><small>Administrator</small> </button>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!--打印机声明-->
+					<h3 class="print_h3">
+						声明 <small>Statement </small>
+					</h3>
+					<table class="table">
+						<thead>
+							<tr>
+								<th>
+									项&nbsp;目
+								</th>
+								<th>
+									说&nbsp;明
+								</th>
+								<th>
+									备&nbsp;注
+								</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr class="success">
+								<td>
+									账&nbsp;号
+								</td>
+								<td>
+									1.仅沪师在职律师注册<br>
+									2.账号：名字首字母缩写<br>
+									3.初始密码：1111
+								</td>
+								<td>
+									1.律助、实习生及其他团队成员共用主管律师账号<br>
+									2.账号可能重复，登陆如果不是本人名字请联系管理员核实账号<br>
+									3.团队负责人请定期修改密码以避免被他人冒用<br>
+									4.忘记密码联系“管理员”
+								</td>
+							</tr>
+							<tr class="error">
+								<td>
+									费&nbsp;用
+								</td>
+								<td>
+									
+									A4黑白0.15元/页<br />A4彩色1.00元/页<br />
+									A3黑白0.30元/页<br />A3彩色2.00元/页<br />
+									双面打印计两页
+								</td>
+								<td>
+									1.费用每月从在职律师账户上扣除<br />
+									2.打印记录可以在“密码修改”网页中查看<br />
+									3.数据定期清理,费用核查仅限前月和当月
+								</td>
+							</tr>
+							<tr class="warning">
+								<td>
+									权&nbsp;利
+								</td>
+								<td>
+									1.账号分配权<br />
+									2.打印机合理使用权<br />
+									3.协助请求权
+								</td>
+								<td>
+									1.在职律师可以将自己账号分享给团队其他人<br />
+									2.所有人均可使用通过合法渠道得到的账号<br />
+									3.打印机安装及使用指导,有问题联系“管理员”
+								</td>
+							</tr>
+							<tr class="info">
+								<td>
+									义&nbsp;务
+								</td>
+								<td>
+									1.爱护打印机<br />
+									2.科学正确地使用打印机<br />
+									3.禁止非法取得账号并使用
+								</td>
+								<td>
+									1.打印为大家,保护靠大家<br />
+									2.任何设备都有极限,我们尽力提供最实惠优质的打印方案<br />
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+			<!--打印机安装与默认设置-->
+			<div class="row clearfix">
+				<div class="col-md-12 column">
+					<!--安装设置-->
+					<div class="row clearfix">
+						<div class="col-md-12 column">
+							<h3 id="Installing" class="print_h3">
+								安装设置 <small>Install & setting</small>
+							</h3>
+							<div class="tabbable" id="tabs-955520">
+								<!--选项卡-->
+								<ul class="nav nav-tabs">
+									<li class="active">
+										 <a href="#panel-616724" data-toggle="tab">Windows 64位<br><small>Win x64 System</small></a>
+									</li>
+									<li>
+										 <a href="#panel-718315" data-toggle="tab">Windows 32位<br><small>Win x86 System</small></a>
+									</li>
+									<li>
+										 <a href="#panel-718312" data-toggle="tab">MacOS系统<br><small>MacOS System</small></a>
+									</li>
+									<li>
+										 <a href="#panel-718313" data-toggle="tab">Windows默认设置<br><small>Windows Default Setting</small></a>
+									</li>
+									<li>
+										 <a href="#panel-718314" data-toggle="tab">MacOS默认设置<br><small>MacOS Default Setting</small></a>
+									</li>
+								</ul>
+								<div class="tab-content">
+									<!--Windows System Content-->
+									<div class="tab-pane active" id="panel-616724">
+										<p class="print_p">
+											<h5><big>安装流程：客户端下载安装→驱动下载安装→默认设置</big></h5>
+											<br>👉<a href="download/print/BIPS/BIPS_NO_192.168.4.222_0_@V4.2.0.3NBP.zip">Bips客户端下载 </a>👉安装(图一) 👉设置(图二)
+											<br>👉<a href="download/print/BIPS/C368.zip">柯美打印机驱动下载 </a>👉安装(图三&图四)
+											<br>👉Ctrl+P选择“2020”直接打印(默认彩色) or 👉移步默认设置<br><br>
+										</p>
+										<div class="carousel slide" id="carousel-194641">
+											<ol class="carousel-indicators">
+												<li class="active" data-target="#carousel-194641" data-slide-to="0">
+												</li>
+												<li data-target="#carousel-194641" data-slide-to="1">
+												</li>
+												<li data-target="#carousel-194641" data-slide-to="2">
+												</li>
+												<li data-target="#carousel-194641" data-slide-to="3">
+												</li>
+											</ol>
+											<div class="carousel-inner">
+												<div class="item active">
+													<img alt=""  src="img/img/print/print.jpg" class="print_imgg"/>
+													<div class="carousel-caption">
+														<h4 class="print_h4">
+															图一
+														</h4>
+														<p class="print_h4_p">
+															 👉 这里没有重点，别点取消就行
+														</p>
+													</div>
+												</div>
+												<div class="item">
+													<img alt="" src="img/img/print/print1.jpg" class="print_imgg" />
+													<div class="carousel-caption">
+														<h4 class="print_h4">
+															图二
+														</h4>
+														<p class="print_h4_p">
+															 👉 账号密码，记住密码，刷卡输出
+														</p>
+													</div>
+												</div>
+												<div class="item">
+													<img alt="" src="img/img/print/print2.jpg" class="print_imgg"/>
+													<div class="carousel-caption">
+														<h4 class="print_h4">
+															图三
+														</h4>
+														<p class="print_h4_p">
+															 👉 IPS Port V2或IPS Port Version 2
+														</p>
+													</div>
+												</div>
+												<div class="item">
+													<img alt="" src="img/img/print/print3.jpg" class="print_imgg"/>
+													<div class="carousel-caption">
+														<h4 class="print_h4">
+															图四
+														</h4>
+														<p class="print_h4_p">
+															 👉 重命名“2020”
+														</p>
+													</div>
+												</div>
+											</div> <a class="left carousel-control" href="#carousel-194641" data-slide="prev"><span class="glyphicon glyphicon-chevron-left"></span></a> <a class="right carousel-control" href="#carousel-194641" data-slide="next"><span class="glyphicon glyphicon-chevron-right"></span></a>
+										</div>
+									</div>
+									<!--Windows x86 System Content-->
+									<div class="tab-pane" id="panel-718315">
+										<p class="print_p">
+											<h5><big>安装流程：客户端下载安装→驱动下载安装→默认设置</big></h5>
+											<br>👉<a href="download/print/BIPS/BIPS_NO_192.168.4.222_0_@V4.2.0.3NBP.zip">Bips客户端下载 </a>👉安装(图一) 👉设置(图二)
+											<br>👉<a href="download/print/BIPS/IT5PCL6Winx86_11200ZH-CN.zip">柯美打印机驱动下载（32位） </a>👉将压缩包解压至桌 👉 添加打印机（图三）👉 设置（图四）
+											<br>👉Ctrl+P选择名字里带“C368”字样的打印机直接打印(默认彩色) or 👉移步默认设置<br><br>
+										</p>
+										<div class="carousel slide" id="carousel-194648">
+											<ol class="carousel-indicators">
+												<li class="active" data-target="#carousel-194641" data-slide-to="0">
+												</li>
+												<li data-target="#carousel-194648" data-slide-to="1">
+												</li>
+												<li data-target="#carousel-194648" data-slide-to="2">
+												</li>
+												<li data-target="#carousel-194648" data-slide-to="3">
+												</li>
+											</ol>
+											<div class="carousel-inner">
+												<div class="item active">
+													<img alt=""  src="img/img/print/print.jpg" class="print_imgg"/>
+													<div class="carousel-caption">
+														<h4 class="print_h4">
+															图一
+														</h4>
+														<p class="print_h4_p">
+															 👉 这里没有重点，别点取消就行
+														</p>
+													</div>
+												</div>
+												<div class="item">
+													<img alt="" src="img/img/print/print1.jpg" class="print_imgg" />
+													<div class="carousel-caption">
+														<h4 class="print_h4">
+															图二
+														</h4>
+														<p class="print_h4_p">
+															 👉 账号密码，记住密码，刷卡输出
+														</p>
+													</div>
+												</div>
+												<div class="item">
+													<img alt="" src="img/img/print/print41.jpg" class="print_imgg"/>
+													<div class="carousel-caption">
+														<h4 class="print_h4">
+															图三
+														</h4>
+														<p class="print_h4_p">
+															 👉 打印机面板选择添加打印机 <br>
+															
+														</p>
+													</div>
+												</div>
+												<div class="item">
+													<img alt="" src="img/img/print/print42.jpg" class="print_imgg"/>
+													<div class="carousel-caption">
+														<h4 class="print_h4">
+															图四
+														</h4>
+														<p class="print_h4_p"> 
+															 👉 端口选择IPS Port V2 <br>
+															 👉 从磁盘安装-浏览-解压至桌面的文件夹-选择INF文件-打开-选择C368驱动-完成安装
+														</p>
+													</div>
+												</div>
+											</div> <a class="left carousel-control" href="#carousel-194648" data-slide="prev"><span class="glyphicon glyphicon-chevron-left"></span></a> <a class="right carousel-control" href="#carousel-194648" data-slide="next"><span class="glyphicon glyphicon-chevron-right"></span></a>
+										</div>
+									</div>
+									<!--MacOS System Content-->
+									<div class="tab-pane" id="panel-718312">
+										<p class="print_p">
+											<h5><big>流程：驱动下载安装→添加打印机→默认设置</big></h5>
+											<br>👉<a href="download/print/BIPS/macOS_10.14.zip">柯美打印机苹果驱动下载 </a> 
+											<br>👉安装(图九 & 图十) 👉添加打印机(图十一 & 图十二) 
+											<br>👉Command+P选择“192.168.4.222”直接打印(默认彩色) or 👉移步默认设置<br><br>
+										</p>
+										<div class="carousel slide" id="carousel-194643">
+											<ol class="carousel-indicators">
+												<li class="active" data-target="#carousel-194643" data-slide-to="0">
+												</li>
+												<li data-target="#carousel-194643" data-slide-to="1">
+												</li>
+												<li data-target="#carousel-194643" data-slide-to="2">
+												</li>
+												<li data-target="#carousel-194643" data-slide-to="3">
+												</li>
+											</ol>
+											<div class="carousel-inner">
+												<div class="item active">
+													<img alt=""  src="img/img/print/print10.jpg" class="print_imgg"/>
+													<div class="carousel-caption">
+														<h4 class="print_h4">
+															图九
+														</h4>
+														<p class="print_h4_p">
+															 👉 找到文件位置是关键
+														</p>
+													</div>
+												</div>
+												<div class="item">
+													<img alt=""  src="img/img/print/print11.jpg" class="print_imgg"/>
+													<div class="carousel-caption">
+														<h4 class="print_h4">
+															图十
+														</h4>
+														<p class="print_h4_p">
+															 👉 要输入的密码是开机密码
+														</p>
+													</div>
+												</div>
+												<div class="item">
+													<img alt=""  src="img/img/print/print4.jpg" class="print_imgg"/>
+													<div class="carousel-caption">
+														<h4 class="print_h4">
+															图十一
+														</h4>
+														<p class="print_h4_p">
+															 👉 这里没有重点
+														</p>
+													</div>
+												</div>
+												<div class="item">
+													<img alt="" src="img/img/print/print5.jpg" class="print_imgg" />
+													<div class="carousel-caption">
+														<h4 class="print_h4">
+															图十二
+														</h4>
+														<p class="print_h4_p">
+															👉  地址：192.168.4.222<br />
+															👉  队列：填自己的打印账号<br />
+															👉  使用：选择软件KONICA MINOLTA C368 PS
+														</p>
+													</div>
+												</div>
+											</div> <a class="left carousel-control" href="#carousel-194643" data-slide="prev"><span class="glyphicon glyphicon-chevron-left"></span></a> <a class="right carousel-control" href="#carousel-194643" data-slide="next"><span class="glyphicon glyphicon-chevron-right"></span></a>
+										</div>
+									</div>
+									<!--Windows Default Setting-->
+									<div class="tab-pane" id="panel-718313">
+										<p class="print_p">
+											<h5><big>流程：打开控制面板→打开打印机首选项→默认设置</big></h5>
+											<br>👉快捷键打开运行框 👉输入control进入控制面板(图五) 
+											<br>👉查看设备和打印机 👉右击打印机“2020”进入首选项
+											<br>👉默认设置功能分别是：防弹窗、防错别字，打印属性(图六)<br><br>
+										</p>
+										<div class="carousel slide" id="carousel-194640">
+											<ol class="carousel-indicators">
+												<li class="active" data-target="#carousel-194640" data-slide-to="0">
+												</li>
+												<li data-target="#carousel-194640" data-slide-to="1">
+												</li>
+											</ol>
+											<div class="carousel-inner">
+												<div class="item active">
+													<img alt=""  src="img/img/print/print6.jpg" class="print_imgg"/>
+													<div class="carousel-caption">
+														<h4 class="print_h4">
+															图五
+														</h4>
+														<p class="print_h4_p">
+															 👉 这里没有重点
+														</p>
+													</div>
+												</div>
+												<div class="item">
+													<img alt="" src="img/img/print/print7.jpg" class="print_imgg" />
+													<div class="carousel-caption">
+														<h4 class="print_h4">
+															图六
+														</h4>
+														<p class="print_h4_p">
+															 👉 灰度级为黑白，自动颜色为彩色
+														</p>
+													</div>
+												</div>
+											</div> <a class="left carousel-control" href="#carousel-194640" data-slide="prev"><span class="glyphicon glyphicon-chevron-left"></span></a> <a class="right carousel-control" href="#carousel-194640" data-slide="next"><span class="glyphicon glyphicon-chevron-right"></span></a>
+										</div>
+									</div>
+									<!--MacOS Default Setting-->
+									<div class="tab-pane" id="panel-718314">
+										<p class="print_p">
+											<h5><big>流程：打印设置界面→选择属性→储存预置→使用预置</big></h5>
+											<br>👉“文档”打印界面 👉下拉框选择属性(图七)
+											<br>👉将当前设置存储为预置(图八) <br>👉选择预置属性打印 <br><br>
+										</p>
+										<div class="carousel slide" id="carousel-194644">
+											<ol class="carousel-indicators">
+												<li class="active" data-target="#carousel-194644" data-slide-to="0">
+												</li>
+												<li data-target="#carousel-194644" data-slide-to="1">
+												</li>
+											</ol>
+											<div class="carousel-inner">
+												<div class="item active">
+													<img alt=""  src="img/img/print/print8.jpg" class="print_imgg"/>
+													<div class="carousel-caption">
+														<h4 class="print_h4">
+															图七
+														</h4>
+														<p class="print_h4_p">
+															 👉 在WPS或者Word文档中设置打印属性<br>
+															 👉 如果不是这个界面请找管理员协助
+														</p>
+													</div>
+												</div>
+												<div class="item">
+													<img alt="" src="img/img/print/print9.jpg" class="print_imgg" />
+													<div class="carousel-caption">
+														<h4 class="print_h4">
+															图八
+														</h4>
+														<p class="print_h4_p">
+															 👉 给双面黑白，单面黑白，单面彩色，双面彩色各设置一个预置
+														</p>
+													</div>
+												</div>
+											</div> <a class="left carousel-control" href="#carousel-194644" data-slide="prev"><span class="glyphicon glyphicon-chevron-left"></span></a> <a class="right carousel-control" href="#carousel-194644" data-slide="next"><span class="glyphicon glyphicon-chevron-right"></span></a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			
+			
+			<!--使用手册-->
+			<div class="row clearfix">
+				<div class="col-md-12 column">
+					<div class="row clearfix">
+						<div class="col-md-12 column">
+							<h3 id="Handbook" class="print_h3">
+								使用手册 <small>Handbook</small>
+							</h3>
+							<div class="tabbable" id="tabs-955520">
+								<!--选项卡-->
+								<ul class="nav nav-tabs">
+									<li class="active">
+										 <a href="#panel-616700" data-toggle="tab">基础打印<br><small>Basic Print</small></a>
+									</li>
+									<li>
+										 <a href="#panel-718301" data-toggle="tab">基础复印<br><small>Basic Duplicate</small></a>
+									</li>
+									<li>
+										 <a href="#panel-718302" data-toggle="tab">基础扫描<br><small>Basic Scan</small></a>
+									</li>
+									<li>
+										 <a href="#panel-718303" data-toggle="tab">身份证复印<br><small>Card Duplicate</small></a>
+									</li>
+								</ul>
+								<div class="tab-content">
+									<!--Print Basic-->
+									<div class="tab-pane active" id="panel-616700">
+										<p class="print_p">
+											<h5><big>流程：电脑打印文件→打印机登陆账号→确认取件</big></h5>
+											<br>👉 电脑上选择打印机2020，设置属性，点击打印
+											<br>👉 打印机上输入账号密码，登录
+											<br>👉	选择需要打印的文件，按开始进行打印<br><br>
+										</p>
+										<div class="carousel slide" id="carousel-194600">
+											<ol class="carousel-indicators">
+												<li class="active" data-target="#carousel-194600" data-slide-to="0">
+												</li>
+												<li data-target="#carousel-194600" data-slide-to="1">
+												</li>
+												<li data-target="#carousel-194600" data-slide-to="2">
+												</li>
+												<li data-target="#carousel-194600" data-slide-to="3">
+												</li>
+											</ol>
+											<div class="carousel-inner">
+												<div class="item active">
+													<img alt=""  src="img/img/print/print32.jpg" class="print_imgg"/>
+												</div>
+												<div class="item">
+													<img alt="" src="img/img/print/print33.jpg" class="print_imgg"/>
+												</div>
+											</div> <a class="left carousel-control" href="#carousel-194600" data-slide="prev"><span class="glyphicon glyphicon-chevron-left"></span></a> <a class="right carousel-control" href="#carousel-194600" data-slide="next"><span class="glyphicon glyphicon-chevron-right"></span></a>
+										</div>
+									</div>
+									<!--Duplicate Basic-->
+									<div class="tab-pane" id="panel-718301">
+										<p class="print_p">
+											<h5><big>流程：登陆账号→进入菜单→放置稿件→选择属性→点击开始</big></h5>
+											<br>👉 如无法自动识别纸张尺寸需要手动指定纸张尺寸 
+											<br>👉 不平整的👉单薄的(如发票)👉特别重要的 文件 
+											<br>👉 上述文件请使用扫描台进行复印以防止损坏文件和机器<br><br>
+										</p>
+										<div class="carousel slide" id="carousel-194601">
+											<ol class="carousel-indicators">
+												<li class="active" data-target="#carousel-194601" data-slide-to="0">
+												</li>
+												<li data-target="#carousel-194601" data-slide-to="1">
+												</li>
+											</ol>
+											<div class="carousel-inner">
+												<div class="item active">
+													<img alt=""  src="img/img/print/print34.jpg" class="print_imgg"/>
+												</div>
+												<div class="item">
+													<img alt=""  src="img/img/print/print35.jpg" class="print_imgg"/>
+												</div>
+											</div> <a class="left carousel-control" href="#carousel-194601" data-slide="prev"><span class="glyphicon glyphicon-chevron-left"></span></a> <a class="right carousel-control" href="#carousel-194601" data-slide="next"><span class="glyphicon glyphicon-chevron-right"></span></a>
+										</div>
+									</div>
+									<!--Scan Basic-->
+									<div class="tab-pane" id="panel-718302">
+										<p class="print_p">
+											<h5><big>流程：登陆账号→进入菜单→放置稿件→选择属性和邮箱→点击开始</big></h5>
+											<br>👉所有注册过的邮件地址都可以在注册机器的地址簿查找到 
+											<br>👉发送受网速和内存影响，单次最大扫描量不提倡超过80页
+											<br>👉送稿台和扫描台的使用参照基础复印<br><br>
+										</p>
+										<div class="carousel slide" id="carousel-194602">
+											<ol class="carousel-indicators">
+												<li class="active" data-target="#carousel-194602" data-slide-to="0">
+												</li>
+												<li data-target="#carousel-194602" data-slide-to="1">
+												</li>
+												<li data-target="#carousel-194602" data-slide-to="2">
+												</li>
+											</ol>
+											<div class="carousel-inner">
+												<div class="item active">
+													<img alt=""  src="img/img/print/print34.jpg" class="print_imgg"/>
+												</div>
+												<div class="item">
+													<img alt="" src="img/img/print/print38.jpg" class="print_imgg" />
+												</div>
+												<div class="item">
+													<img alt="" src="img/img/print/print39.jpg" class="print_imgg" />
+												</div>
+											</div> <a class="left carousel-control" href="#carousel-194602" data-slide="prev"><span class="glyphicon glyphicon-chevron-left"></span></a> <a class="right carousel-control" href="#carousel-194602" data-slide="next"><span class="glyphicon glyphicon-chevron-right"></span></a>
+										</div>
+									</div>
+									<!--CarD Duplicate-->
+									<div class="tab-pane" id="panel-718303">
+										<p class="print_p">
+											<h5><big>流程：登陆账号→进入菜单→放置稿件→选择属性→点击开始</big></h5>
+											<br>👉 双面>组合 一定要选 双面>单面 自动 二合一
+											<br>👉 证件摆放位置不重要，只要摆平整就好 
+											<br>👉 复印完记得取走原件<br><br>
+										</p>
+										<div class="carousel slide" id="carousel-194603">
+											<ol class="carousel-indicators">
+												<li class="active" data-target="#carousel-194603" data-slide-to="0">
+												</li>
+												<li data-target="#carousel-194603" data-slide-to="1">
+												</li>
+											</ol>
+											<div class="carousel-inner">
+												<div class="item active">
+													<img alt=""  src="img/img/print/print34.jpg" class="print_imgg"/>
+												</div>
+												<div class="item">
+													<img alt="" src="img/img/print/print36.jpg" class="print_imgg" />
+												</div>
+												<div class="item">
+													<img alt="" src="img/img/print/print37.jpg" class="print_imgg" />
+												</div>
+											</div> <a class="left carousel-control" href="#carousel-194603" data-slide="prev"><span class="glyphicon glyphicon-chevron-left"></span></a> <a class="right carousel-control" href="#carousel-194603" data-slide="next"><span class="glyphicon glyphicon-chevron-right"></span></a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!--管理员--><br><br>
+			<div class="row clearfix">
+				<h3 class="print_h3" id="Administrator">
+					管理员 <small>Administrator </small>
+				</h3>
+				<div class="col-md-6 column">
+					<div class="print_img"><br /><br />
+						<img src="img/print_1.png"  class="print_imggg"/>
+						<br /><br />阳文广
+						<br /><br />
+					</div>
+					
+				</div>
+				<div class="col-md-6 column">
+					<div class="print_img"><br /><br />
+						<img src="img/print_2.png" class="print_imggg"/>
+						<br /><br />秦威政
+						<br /><br />
+						
+					</div>
+					
+				</div>
+			</div>
+			
+			<br /><br /><br /><br /><br />
+		</div>	
+	</div>
+</div>
+</body>
+</html>

@@ -14,7 +14,12 @@
 				<option value="其他">其他</option>
 			</select><br />
 			文件名：<input type="text" name="wjm"  /><br />
-			<input type="submit" value="哈哈 填完上传"/>
+			类别：<select name="ls">
+				<option value="0">京师</option>
+				<option value="1">京师+沪师</option>
+				<option value="2">沪师</option>
+			</select><br />
+			<input type="submit" value="上传"/>
 		</form>
 	</body>
 </html>

@@ -40,6 +40,7 @@
 		<table border="2" id="list">
 			<thead>
 				<tr>
+					<th>序号</th>
 					<th>律所</th>
 					<th>姓名</th>
 					<th>类别</th>
@@ -86,6 +87,7 @@
 					Response.write sql
 					for i=1 to rs.recordcount
 						Response.write "<tr>"
+						Response.write "<td>" &rs.Fields.Item("序号")& "</td>"
 						Response.write "<td>" &rs.Fields.Item("律所")& "</td>"
 						Response.write "<td>" &rs.Fields.Item("姓名")& "</td>"
 						Response.write "<td>" &rs.Fields.Item("类别")& "</td>"

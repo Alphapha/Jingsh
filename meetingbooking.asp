@@ -10,13 +10,13 @@
 	<link rel="shortcut icon" href="img/logo1-3.png" />
 	<link rel="stylesheet" type="text/css" href="/css/index.css" />
 	
-	<script src="/css/bootstrap/js/jquery.min.js"></script>
-	<script src="js/click.js" defer="defer"></script>
+	<script src="../css/bootstrap/js/jquery.min.js"></script>
+	<script src="../js/click.js" defer="defer"></script>
 	
 	<style type="text/css">
 		body{
 			text-align: center;
-			background-color: lightgoldenrodyellow;
+			background-color: #C1E2B3;
 			font-size: 20px;
 		}
 		.meet{
@@ -91,7 +91,7 @@
 				document.order.sjh.focus();
 				return false;
 			}
-			if (document.order.bz.value.length > 6 ){
+			if (document.order.bz.value.length > 15 ){
 				alert("请精简备注信息，限6字，详细信息请对接会议负责人！！！");
 				document.order.bz.focus();
 				return false;
@@ -120,8 +120,6 @@
 			<option value="第四会议室">第四会议室</option>
 			<option value="第五会议室">第五会议室</option>
 			<option value="第六会议室">第六会议室</option>
-			<option value="第七会议室">第七会议室</option>
-			<option value="VIP会议室">VIP会议室</option>
 			<option value="洽谈室（1）">洽谈室（1）</option>
 			<option value="洽谈室（2）">洽谈室（2）</option>
 			<option value="洽谈室（3）">洽谈室（3）</option>
@@ -192,7 +190,7 @@
 		
 		<input type="text" name="sjh" class="rowrow" placeholder="预定人姓名(必填)" >
 		
-		<input type="text" name="bz" class="rowrow" placeholder="备注:茶水-投影 (选填)" ><br /><br />
+		<input type="text" name="bz" class="rowrow" placeholder="备注:茶水几杯/投影/电视 (选填)" ><br /><br />
 		
 		
 		<input type="hidden" name="cook" value="0">
@@ -200,9 +198,10 @@
 		<input type="submit" value="预定" style="width: 50px;height: 50px;background-color: whitesmoke;border-radius: 100%;"/>
 	</form>
 	
-	
-	注意：大会议室预定需审核通过才可使用，具体联系会议负责人。
+	*非当日预定可在最下方查询预定情况<br><br>
+	*VIP会议室、大会议室预定需审核通过才可使用，具体联系会议负责人。
 	<br /><br />
+	*会议室空闲时间超过10分钟视为放弃使用，会议负责人可将会议室重新分配。<br /><br />
 	<table border="1" class="meet">
 		<thead>
 			<tr> 
@@ -316,19 +315,7 @@
 				<td><%=att(3,68)%><br><%=att(4,68)%><br><%=att(5,68)%></td>
 				<td><%=att(3,69)%><br><%=att(4,69)%><br><%=att(5,69)%></td>
 			</tr>		
-			<tr>
-				<td height="50px">VIP会议室</td>
-				<td><%=att(3,70)%><br><%=att(4,70)%><br><%=att(5,70)%></td>
-				<td><%=att(3,71)%><br><%=att(4,71)%><br><%=att(5,71)%></td>
-				<td><%=att(3,72)%><br><%=att(4,72)%><br><%=att(5,72)%></td>
-				<td><%=att(3,73)%><br><%=att(4,73)%><br><%=att(5,73)%></td>
-				<td><%=att(3,74)%><br><%=att(4,74)%><br><%=att(5,74)%></td>
-				<td><%=att(3,75)%><br><%=att(4,75)%><br><%=att(5,75)%></td>
-				<td><%=att(3,76)%><br><%=att(4,76)%><br><%=att(5,76)%></td>
-				<td><%=att(3,77)%><br><%=att(4,77)%><br><%=att(5,77)%></td>
-				<td><%=att(3,78)%><br><%=att(4,78)%><br><%=att(5,78)%></td>
-				<td><%=att(3,79)%><br><%=att(4,79)%><br><%=att(5,79)%></td>
-			</tr>	
+				
 			<tr>
 				<td height="50px">洽谈室（1）<br>四楼B-001</td>
 				<td><%=att(3,80)%><br><%=att(4,80)%><br><%=att(5,80)%></td>
@@ -369,7 +356,7 @@
 				<td><%=att(3,109)%><br><%=att(4,109)%><br><%=att(5,109)%></td>
 			</tr>	
 			<tr>
-				<td height="50px">洽谈室（4）<br>四楼D-012</td>
+				<td height="50px">洽谈室（4）<br>四楼D-014</td>
 				<td><%=att(3,110)%><br><%=att(4,110)%><br><%=att(5,110)%></td>
 				<td><%=att(3,111)%><br><%=att(4,111)%><br><%=att(5,111)%></td>
 				<td><%=att(3,112)%><br><%=att(4,112)%><br><%=att(5,112)%></td>
@@ -395,7 +382,7 @@
 				<td><%=att(3,129)%><br><%=att(4,129)%><br><%=att(5,129)%></td>
 			</tr>
 			<tr>
-				<td height="50px">洽谈室（6）<br>四楼D-014</td>
+				<td height="50px">洽谈室（6）<br>四楼D-012</td>
 				<td><%=att(3,130)%><br><%=att(4,130)%><br><%=att(5,130)%></td>
 				<td><%=att(3,131)%><br><%=att(4,131)%><br><%=att(5,131)%></td>
 				<td><%=att(3,132)%><br><%=att(4,132)%><br><%=att(5,132)%></td>
@@ -411,7 +398,7 @@
 
 				
 		</tfoot>	
-	</table>
+	</table><br><br>
 	<table border="2" class="meet">
 		<thead>
 			<tr>
@@ -429,7 +416,7 @@
 		</thead>
 		<tbody>
 			<%
-				sql1= "select * from meetorderbig WHERE DATE >= CURDATE() and TIME IS NOT NULL"
+				sql1= "select * from meetorderbig WHERE DATE >= CURDATE() and TIME IS NOT NULL ORDER BY DATE ASC"
 				rs1.CursorLocation = 3
 				rs1.open sql1,conn,1,3
 				for i=1 to rs1.recordcount
@@ -449,7 +436,7 @@
 			%>
 			
 		</tbody>
-	</table>
+	</table><br><br>
 	<table border="2" class="meet">
 			<thead>
 				
@@ -460,7 +447,7 @@
 					<th>日期</th>
 					<th>时间</th>
 					<th>会议室</th>
-					<th>扣款律师</th>
+					<th>扣费人</th>
 					<th>预定人</th>
 					<th>备注</th>
 				</tr>

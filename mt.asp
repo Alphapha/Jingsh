@@ -12,7 +12,6 @@
 	
 	<script src="/css/bootstrap/js/jquery.min.js"></script>
 	<script src="js/click.js" defer="defer"></script>
-	
 	<style type="text/css">
 		body{
 			text-align: center;
@@ -35,7 +34,11 @@
 </head>
 <body onselectstart="return false" oncontextmenu="return false">
 	<!--#include file = 'conn.asp'-->
-	
+	<h1>数据导出</h1>
+	<form method="post" action="export_meeting.asp">
+		<input type="date" name="e_rq1" class="rowrow">-<input type="date" name="e_rq2" class="rowrow"><br /><br />
+		<input type="submit" value="京师" style="width: 50px;height: 50px;background-color: whitesmoke;border-radius: 100%;"/>
+	</form>
 	<h1>会议室预定</h1>
 	<form method="post" action="mt_insert_sql.asp" name="order">
 		日期：<input type="date" name="rq" class="rowrow">
@@ -83,7 +86,7 @@
 		</thead>
 		<tbody>
 			<%
-				sql1= "select * from meetorderbig WHERE DATE >= CURDATE() and TIME IS NOT NULL"
+				sql1= "select * from meetorderbig WHERE DATE >= CURDATE() and TIME IS NOT NULL  ORDER BY DATE ASC"
 				rs1.CursorLocation = 3
 				rs1.open sql1,conn,1,3
 				for i=1 to rs1.recordcount
@@ -186,15 +189,7 @@
 	<br><br><br>
 	
 	
-	<form method="post" action="export_meeting.asp">
-		<select name="gs" class="rowrow">
-			<option value="js">京师</option>
-			<option value="hs">沪师</option>
-			<option value="etc">活动表</option>
-		</select><br /><br />
-		<input type="date" name="e_rq1" class="rowrow">-<input type="date" name="e_rq2" class="rowrow"><br /><br />
-		<input type="submit" value="导出数据" />
-	</form>
+
 	<br><br><br>
 	</body>
 </html>
