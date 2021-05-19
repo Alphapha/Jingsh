@@ -16,7 +16,7 @@
 	<style type="text/css">
 		body{
 			text-align: center;
-			background-color: lightgoldenrodyellow;
+			background-color: #C1E2B3;
 			font-size: 20px;
 		}
 		.meet{
@@ -120,13 +120,18 @@
 			<option value="第四会议室">第四会议室</option>
 			<option value="第五会议室">第五会议室</option>
 			<option value="第六会议室">第六会议室</option>
-			<option value="第七会议室">第七会议室</option>
 			<option value="洽谈室（1）">洽谈室（1）</option>
 			<option value="洽谈室（2）">洽谈室（2）</option>
 			<option value="洽谈室（3）">洽谈室（3）</option>
 			<option value="洽谈室（4）">洽谈室（4）</option>
 			<option value="洽谈室（5）">洽谈室（5）</option>
 			<option value="洽谈室（6）">洽谈室（6）</option>
+			<option value="洽谈室（7）">洽谈室（7）</option>
+			<option value="洽谈室（8）">洽谈室（8）</option>
+			<option value="洽谈室（9）">洽谈室（9）</option>
+			<option value="洽谈室（10）">洽谈室（10）</option>
+			<option value="洽谈室（11）">洽谈室（11）</option>
+			<option value="洽谈室（12）">洽谈室（12）</option>
 		</select>
 		
 		
@@ -202,6 +207,7 @@
 	*非当日预定可在最下方查询预定情况<br><br>
 	*VIP会议室、大会议室预定需审核通过才可使用，具体联系会议负责人。
 	<br /><br />
+	*会议室空闲时间超过10分钟视为放弃使用，会议负责人可将会议室重新分配。<br /><br />
 	<table border="1" class="meet">
 		<thead>
 			<tr> 
@@ -302,7 +308,7 @@
 				<td><%=att(3,58)%><br><%=att(4,58)%><br><%=att(5,58)%></td>
 				<td><%=att(3,59)%><br><%=att(4,59)%><br><%=att(5,59)%></td>
 			</tr>		
-			<tr>
+			<!--<tr>
 				<td height="50px">第七会议室</td>
 				<td><%=att(3,60)%><br><%=att(4,60)%><br><%=att(5,60)%></td>
 				<td><%=att(3,61)%><br><%=att(4,61)%><br><%=att(5,61)%></td>
@@ -314,7 +320,7 @@
 				<td><%=att(3,67)%><br><%=att(4,67)%><br><%=att(5,67)%></td>
 				<td><%=att(3,68)%><br><%=att(4,68)%><br><%=att(5,68)%></td>
 				<td><%=att(3,69)%><br><%=att(4,69)%><br><%=att(5,69)%></td>
-			</tr>		
+			</tr>		-->
 				
 			<tr>
 				<td height="50px">洽谈室（1）<br>四楼B-001</td>
@@ -394,6 +400,85 @@
 				<td><%=att(3,138)%><br><%=att(4,138)%><br><%=att(5,138)%></td>
 				<td><%=att(3,139)%><br><%=att(4,139)%><br><%=att(5,139)%></td>
 			</tr>
+			<!--sanlou-->
+			<tr>
+				<td height="50px">洽谈室（7）<br>三楼D-013_</td>
+				<td><%=att(3,140)%><br><%=att(4,140)%><br><%=att(5,140)%></td>
+				<td><%=att(3,141)%><br><%=att(4,141)%><br><%=att(5,141)%></td>
+				<td><%=att(3,142)%><br><%=att(4,142)%><br><%=att(5,142)%></td>
+				<td><%=att(3,143)%><br><%=att(4,143)%><br><%=att(5,143)%></td>
+				<td><%=att(3,144)%><br><%=att(4,144)%><br><%=att(5,144)%></td>
+				<td><%=att(3,145)%><br><%=att(4,145)%><br><%=att(5,145)%></td>
+				<td><%=att(3,146)%><br><%=att(4,146)%><br><%=att(5,146)%></td>
+				<td><%=att(3,147)%><br><%=att(4,147)%><br><%=att(5,147)%></td>
+				<td><%=att(3,148)%><br><%=att(4,148)%><br><%=att(5,148)%></td>
+				<td><%=att(3,149)%><br><%=att(4,149)%><br><%=att(5,149)%></td>
+			</tr>
+			<tr>
+				<td height="50px">洽谈室（8）<br>三楼D-014</td>
+				<td><%=att(3,150)%><br><%=att(4,150)%><br><%=att(5,150)%></td>
+				<td><%=att(3,151)%><br><%=att(4,151)%><br><%=att(5,151)%></td>
+				<td><%=att(3,152)%><br><%=att(4,152)%><br><%=att(5,152)%></td>
+				<td><%=att(3,153)%><br><%=att(4,153)%><br><%=att(5,153)%></td>
+				<td><%=att(3,154)%><br><%=att(4,154)%><br><%=att(5,154)%></td>
+				<td><%=att(3,155)%><br><%=att(4,155)%><br><%=att(5,155)%></td>
+				<td><%=att(3,156)%><br><%=att(4,156)%><br><%=att(5,156)%></td>
+				<td><%=att(3,157)%><br><%=att(4,157)%><br><%=att(5,157)%></td>
+				<td><%=att(3,158)%><br><%=att(4,158)%><br><%=att(5,158)%></td>
+				<td><%=att(3,159)%><br><%=att(4,159)%><br><%=att(5,159)%></td>
+			</tr>
+			<tr>
+				<td height="50px">洽谈室（9）<br>三楼D-015</td>
+				<td><%=att(3,160)%><br><%=att(4,160)%><br><%=att(5,160)%></td>
+				<td><%=att(3,161)%><br><%=att(4,161)%><br><%=att(5,161)%></td>
+				<td><%=att(3,162)%><br><%=att(4,162)%><br><%=att(5,162)%></td>
+				<td><%=att(3,163)%><br><%=att(4,163)%><br><%=att(5,163)%></td>
+				<td><%=att(3,164)%><br><%=att(4,164)%><br><%=att(5,164)%></td>
+				<td><%=att(3,165)%><br><%=att(4,165)%><br><%=att(5,165)%></td>
+				<td><%=att(3,166)%><br><%=att(4,166)%><br><%=att(5,166)%></td>
+				<td><%=att(3,167)%><br><%=att(4,167)%><br><%=att(5,167)%></td>
+				<td><%=att(3,168)%><br><%=att(4,168)%><br><%=att(5,168)%></td>
+				<td><%=att(3,169)%><br><%=att(4,169)%><br><%=att(5,169)%></td>
+			</tr>
+			<tr>
+				<td height="50px">洽谈室（10）<br>三楼D-016</td>
+				<td><%=att(3,170)%><br><%=att(4,170)%><br><%=att(5,170)%></td>
+				<td><%=att(3,171)%><br><%=att(4,171)%><br><%=att(5,171)%></td>
+				<td><%=att(3,172)%><br><%=att(4,172)%><br><%=att(5,172)%></td>
+				<td><%=att(3,173)%><br><%=att(4,173)%><br><%=att(5,173)%></td>
+				<td><%=att(3,174)%><br><%=att(4,174)%><br><%=att(5,174)%></td>
+				<td><%=att(3,175)%><br><%=att(4,175)%><br><%=att(5,175)%></td>
+				<td><%=att(3,176)%><br><%=att(4,176)%><br><%=att(5,176)%></td>
+				<td><%=att(3,177)%><br><%=att(4,177)%><br><%=att(5,177)%></td>
+				<td><%=att(3,178)%><br><%=att(4,178)%><br><%=att(5,178)%></td>
+				<td><%=att(3,179)%><br><%=att(4,179)%><br><%=att(5,179)%></td>
+			</tr>
+			<tr>
+				<td height="50px">洽谈室（11）<br>三楼D-017</td>
+				<td><%=att(3,180)%><br><%=att(4,180)%><br><%=att(5,180)%></td>
+				<td><%=att(3,181)%><br><%=att(4,181)%><br><%=att(5,181)%></td>
+				<td><%=att(3,182)%><br><%=att(4,182)%><br><%=att(5,182)%></td>
+				<td><%=att(3,183)%><br><%=att(4,183)%><br><%=att(5,183)%></td>
+				<td><%=att(3,184)%><br><%=att(4,184)%><br><%=att(5,184)%></td>
+				<td><%=att(3,185)%><br><%=att(4,185)%><br><%=att(5,185)%></td>
+				<td><%=att(3,186)%><br><%=att(4,186)%><br><%=att(5,186)%></td>
+				<td><%=att(3,187)%><br><%=att(4,187)%><br><%=att(5,187)%></td>
+				<td><%=att(3,188)%><br><%=att(4,188)%><br><%=att(5,188)%></td>
+				<td><%=att(3,189)%><br><%=att(4,189)%><br><%=att(5,189)%></td>
+			</tr>
+			<tr>
+				<td height="50px">洽谈室（12）<br>三楼D-018</td>
+				<td><%=att(3,190)%><br><%=att(4,190)%><br><%=att(5,190)%></td>
+				<td><%=att(3,191)%><br><%=att(4,191)%><br><%=att(5,191)%></td>
+				<td><%=att(3,192)%><br><%=att(4,192)%><br><%=att(5,192)%></td>
+				<td><%=att(3,193)%><br><%=att(4,193)%><br><%=att(5,193)%></td>
+				<td><%=att(3,194)%><br><%=att(4,194)%><br><%=att(5,194)%></td>
+				<td><%=att(3,195)%><br><%=att(4,195)%><br><%=att(5,195)%></td>
+				<td><%=att(3,196)%><br><%=att(4,196)%><br><%=att(5,196)%></td>
+				<td><%=att(3,197)%><br><%=att(4,197)%><br><%=att(5,197)%></td>
+				<td><%=att(3,198)%><br><%=att(4,198)%><br><%=att(5,198)%></td>
+				<td><%=att(3,199)%><br><%=att(4,199)%><br><%=att(5,199)%></td>
+			</tr>
 			
 
 				
@@ -436,7 +521,7 @@
 			%>
 			
 		</tbody>
-	</table>
+	</table><br><br>
 	<table border="2" class="meet">
 			<thead>
 				
